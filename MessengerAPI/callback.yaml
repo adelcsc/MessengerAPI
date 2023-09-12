@@ -1,0 +1,19 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: callback-api
+  labels:
+    app: callback-api
+spec:
+  containers:
+    - name: callback-api
+      image: Image
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchFields:
+              - key: 
+                operator: 
